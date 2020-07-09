@@ -184,7 +184,7 @@ Page({
                   that.setData({
                     isDaBiao: 0
                   })
-                } else {
+                                } else {
                   that.setData({
                     isDaBiao: 1
                   })
@@ -1223,13 +1223,14 @@ Page({
     var isDaBiao = that.data.isDaBiao;
     var isAmount = that.data.isAmount;
     var amountValue = that.data.amountValue;
+    //0 是达标
     if (isDaBiao != 0) {
       that.setData({
         isHeGe: 1
       })
     }
     var isHeGe = that.data.isHeGe;
-    if (audioSrc.length === 0) {
+    if (isHeGe!=0&&audioSrc.length === 0) {
       if ((reportImg.length + reportVideo.length) < 1) {
         wx.showToast({
           title: '请拍摄举报图片/视频',
@@ -1251,6 +1252,9 @@ Page({
       return
     }
     if(isAmount==1){
+      if(isHeGe===0 && (amountValue===null || amountValue === '')){
+        amountValue = 0;
+      }
       if (amountValue===null || amountValue === '') {
         wx.showToast({
         title: '问题处数不能为空',
@@ -1347,6 +1351,8 @@ Page({
     var length = reportImg.length + reportVideo.length + audioSrc.length;
     // 上传成功的资源长度
     var rsLength = that.data.resourceList.length;
+    // console.log(length)
+    // console.log(rsLength)
     // 资源全部上传成功 上传答案
     if (length == rsLength) {
       that.uploadAnswerTrue();
