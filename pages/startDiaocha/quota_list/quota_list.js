@@ -177,7 +177,7 @@ Page({
         'Content-Type': 'application/json'
       },
       success: (res) => {
-
+console.log(res)
         if (res.data.status == 'success') {
           var quotaList = res.data.retObj;
           // console.log("指标下的详情111111：", quotaList)

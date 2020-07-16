@@ -9,6 +9,14 @@ Page({
     fontSize:'',
     bgColorUi:''
   },
+
+  
+  // onmouseover:function (obj){ 
+  //   alert("停在图片上");
+  //   $(obj).attr("width",500).attr("height",500);
+
+  // },
+
   /**
    * 生命周期函数--监听页面加载
    */

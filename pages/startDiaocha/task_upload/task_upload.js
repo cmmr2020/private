@@ -1229,8 +1229,9 @@ Page({
       })
     }
     var isHeGe = that.data.isHeGe;
-    if (audioSrc.length === 0) {
-      if ((reportImg.length + reportVideo.length) < 1) {
+    
+    if (isHeGe!=0&&audioSrc.length === 0) {
+      if (isHeGe!=0&&(reportImg.length + reportVideo.length) < 1) {
         wx.showToast({
           title: '请拍摄举报图片/视频',
           icon: 'none',
@@ -1240,7 +1241,12 @@ Page({
         return
       }
     }
-
+    // else{
+    //   that.setData({
+    //     isHeGe:0
+    //   })
+    // }
+    
     if (optionId == null || optionId == '') {
       wx.showToast({
         title: '检查结果不能为空',
@@ -1258,7 +1264,7 @@ Page({
         duration: 1000,
         mask: true
       })
-      return
+      return 
       }
     }
     //不合格必须有资源描述

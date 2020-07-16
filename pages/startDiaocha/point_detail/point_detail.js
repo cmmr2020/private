@@ -212,23 +212,30 @@ Page({
   },
   //内置地图导航
   goToMap:function(e){
+    
     var that = this;
     var address = e.currentTarget.dataset.address;
     var latitude = Number(e.currentTarget.dataset.latitude);
     var longitude = Number(e.currentTarget.dataset.longitude);
     if (typeof(address)!="undefined" && typeof(latitude)!="undefined" && typeof(longitude)!="undefined") {
-       wx.openLocation({
-         address,
-         latitude,
-         longitude,
-         scale: 18
-       })
+      wx.chooseLocation({
+        success(res) {
+          console.log(res)
+          that.setData({
+            hasLocation: true,
+            location: formatLocation(res.longitude, res.latitude),
+            locationAddress: res.address
+            
+          })
+        }
+      })
      }else{
          wx.showToast({
           title: '该地址位置不合法',
           icon: 'none',
           duration: 2000
         })
-     }
+     
+    }
   }
 })

@@ -8,6 +8,7 @@
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
@@ -190,6 +191,13 @@
 					"id": -1,
 					"name": "材料审核",
 					"pathName": "pages/DatumCheck/datum_check2_see/datum_check2_see",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "project_list",
+					"pathName": "pages/startDiaocha/project_list/project_list",
 					"scene": null
 				}
 			]
