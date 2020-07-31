@@ -33,16 +33,16 @@
   background-position: center;
   position: relative;
   z-index: 1;
-
   transition: width 2s, height 2s, transform 2s;
   -webkit-transition: width 2s;
-  
+
 }
-.nav-li:hover{
+.nav-li::before{
     width: 200px;
     height: 200px;
     -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
     transform: rotate(360deg);
+    
 }
 
 .nav-li::after {

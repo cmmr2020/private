@@ -35,7 +35,7 @@
   -webkit-transition: width 2s;
   
 }
-.nav-li:hover{
+.nav-li::before{
     width: 200px;
     height: 200px;
     -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
