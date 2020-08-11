@@ -35,6 +35,7 @@ onShareAppMessage: function (res) {
     var that = this;
     var requestUrl = app.globalData.requestUrl; //服务器路径
     var appId = wx.getAccountInfoSync().miniProgram.appId;
+    app.appId=appId;
     wx.login({
       success(res) {
         if (res.code) {
