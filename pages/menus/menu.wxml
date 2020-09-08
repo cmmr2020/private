@@ -2,7 +2,7 @@
 
 <view class="cu-card article div-use">
   <view class="cu-item shadow">
-    <view class="open-user">
+    <view class="open-user" bindtap="goToPage">
       <open-data type="userAvatarUrl" class=" userinfo bg-white userinfo-avatar icon" style="border-radius: 5000rpx"></open-data>
       <!--  <open-data type="userNickName" class="userinfo-nickname"></open-data> -->
       <!--   <view class="flex">
@@ -30,7 +30,7 @@
           <!-- <view class="cu-tag bg-blue light  round" >文明办</view> -->
         </view>
       </view>
-        <text class="cuIcon-right icon_user" bind:tap="goToPage"></text>
+        <text class="cuIcon-right icon_user"></text>
     </view>
 
   </view>
